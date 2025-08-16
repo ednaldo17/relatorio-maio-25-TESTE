@@ -85,5 +85,30 @@ with col_graf1:
             y='Cliente',
             orientation='h',
             title="Top 15 Clientes por Nº de Inserções",
-            labels={'Inserções': 'Quantidade de Inserções', 'Cliente': ''}
+            labels={'Inserções': 'Quantidade de Inserções', 'Cliente': ''},
+            text='Inserções'
+        )
+        grafico_clientes.update_layout(title_x=0.1, yaxis={'categoryorder':'total ascending'})
+        st.plotly_chart(grafico_clientes, use_container_width=True)
+    else:
+        st.warning("Nenhum dado para exibir no gráfico de clientes.")
 
+with col_graf2:
+    if not df_filtrado.empty and df_filtrado['Inserções'].sum() > 0:
+        grafico_dist = px.pie(
+            df_filtrado.nlargest(10, 'Inserções'), # Mostra apenas os 10 maiores para um gráfico mais limpo
+            names='Cliente',
+            values='Inserções',
+            title='Proporção de Inserções (Top 10 Clientes)',
+            hole=0.4
+        )
+        grafico_dist.update_traces(textinfo='percent+label', textposition='inside')
+        grafico_dist.update_layout(showlegend=False, title_x=0.15)
+        st.plotly_chart(grafico_dist, use_container_width=True)
+    else:
+        st.warning("Nenhum dado para exibir no gráfico de proporção.")
+
+
+# --- Tabela de Dados Detalhados ---
+st.subheader("Dados Detalhados")
+st.dataframe(df_filtrado.style.format({"Inserções": "{:}"}), hide_index=True)
