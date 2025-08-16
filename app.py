@@ -21,7 +21,7 @@ except FileNotFoundError:
 
 
 # --- Barra Lateral (Filtros) ---
-st.sidebar.header("🔍 Filtros")
+st.sidebar.header("🤝 Clientes")
 
 # Filtro de Cliente
 clientes_disponiveis = sorted(df['Cliente'].unique())
