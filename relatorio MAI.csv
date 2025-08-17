@@ -4,7 +4,7 @@ ID,Código,Cliente,Agência,Inserções
 3,86,Alcântara Peças,Ednaldo,42
 4,88,Amargo e Vitamel,Laetson,209
 5,28,Amiga do Aposentado,Laetson,84
-6,7,ATACADÃO,Débora,112
+6,7,Atacadão,Débora,112
 7,84 e 84a,Audio Center,Débora,182
 8,9,Baterias Moura,Bitury FM,246
 9,5,BrucoMAX,Laetson,104
@@ -36,4 +36,5 @@ ID,Código,Cliente,Agência,Inserções
 35,45,Residencial Maria Júlia,Igon,70
 36,600,RR. Calçados,Ednaldo,70
 37,75,Silvana Galvão,Bitury FM,47
+
 38,27,Teleinfor,Débora,93
