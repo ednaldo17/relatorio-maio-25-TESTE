@@ -48,11 +48,11 @@ def carregar_dados():
 df = carregar_dados()
 
 if df is None:
-    st.error("Erro: O arquivo 'relatorio_detalhado.csv' não foi encontrado. Certifique-se de que ele está na mesma pasta que o script.")
+    st.error("Erro: O arquivo 'relatorio MAI.csv' não foi encontrado. Certifique-se de que ele está na mesma pasta que o script.")
     st.stop()
 
 # --- Barra Lateral (Filtros) ---
-st.sidebar.header("🔍 ")
+st.sidebar.header("🔍 Filtros")
 
 # Filtro de Cliente
 clientes_disponiveis = sorted(df['Cliente'].unique())
@@ -165,5 +165,6 @@ st.dataframe(
     hide_index=True,
     use_container_width=True
 )
+
 
 
