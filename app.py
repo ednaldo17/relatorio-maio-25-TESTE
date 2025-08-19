@@ -52,7 +52,7 @@ if df is None:
     st.stop()
 
 # --- Barra Lateral (Filtros) ---
-st.sidebar.header("🔍 Filtros")
+st.sidebar.header("🔍 ")
 
 # Filtro de Cliente
 clientes_disponiveis = sorted(df['Cliente'].unique())
@@ -165,4 +165,5 @@ st.dataframe(
     hide_index=True,
     use_container_width=True
 )
+
 
