@@ -15,7 +15,7 @@ st.set_page_config(
 @st.cache_data
 def carregar_dados():
     try:
-        df = pd.read_csv("relatorio_detalhado.csv")
+        df = pd.read_csv("relatorio MAI.csv")
         df['Data_Inicio'] = pd.to_datetime(df['Data_Inicio'], errors='coerce')
         df['Data_Fim'] = pd.to_datetime(df['Data_Fim'], errors='coerce')
 
@@ -165,3 +165,4 @@ st.dataframe(
     hide_index=True,
     use_container_width=True
 )
+
